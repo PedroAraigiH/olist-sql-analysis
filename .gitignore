@@ -1,6 +1,6 @@
 data/
 __pycache__/
-analysis.ipynb
+.ipynb_checkpoints/
 .vscode/
 .venv/
 tables.txt
