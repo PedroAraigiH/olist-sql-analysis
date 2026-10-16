@@ -1,0 +1,6 @@
+data/
+__pycache__/
+analysis.ipynb
+.vscode/
+.venv/
+tables.txt
