@@ -8,7 +8,7 @@ JOIN products p ON i.product_id = p.product_id
 LEFT JOIN product_category_name_translation t ON p.product_category_name = t.product_category_name 
 WHERE o.order_status = 'delivered'
     AND o.order_delivered_customer_date IS NOT NULL
-    AND strftime('%Y-%m', o.order_purchase_timestamp) BETWEEN '2017-01' AND '2018-08'  
+    AND strftime('%Y-%m', o.order_purchase_timestamp) BETWEEN '2017-01' AND '2018-08'
 GROUP BY category 
 ORDER BY revenue 
 DESC LIMIT 10;
