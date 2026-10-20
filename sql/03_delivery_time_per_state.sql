@@ -18,9 +18,9 @@ WITH single_seller_orders AS (
     GROUP BY order_id
     HAVING COUNT(DISTINCT seller_id) = 1
 )
-SELECT CASE WHEN customer_state = seller_state THEN 'same state' ELSE 'different state' END AS route,
+SELECT CASE WHEN c.customer_state = s.seller_state THEN 'same state' ELSE 'different state' END AS route,
        COUNT(*) AS n_orders,
-       ROUND(AVG(JULIANDAY(o.order_delivered_customer_date) - JULIANDAY(o.order_estimated_delivery_date)), 1) AS avg_days
+       ROUND(AVG(JULIANDAY(o.order_delivered_customer_date) - JULIANDAY(o.order_purchase_timestamp)), 1) AS avg_days
 FROM orders o
 JOIN single_seller_orders x ON x.order_id = o.order_id
 JOIN sellers s ON x.seller_id = s.seller_id
