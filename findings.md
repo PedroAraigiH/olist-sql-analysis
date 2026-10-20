@@ -1,3 +1,5 @@
+**Dataset:** [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
 ## Data checks before starting analysis
 - Customers ID count: 99441, from which 96096 are real customers with unique ID. This means that 3345 (3.4%) of orders are repeat orders, meaning they are not that customer's first order.
 -> Decision: the customer unique ID is used for customer analysis.
@@ -35,14 +37,14 @@ The top 5 days with the most orders during november 2017 are respectively the: 2
 ## Top product categories by revenue
 - The top 3 product categories by revenue make 25.92% of the total revenue. The lead goes to 'health_beauty' category with 1229557.50 in revenue corresponding to a 9.33% share of total revenue. In second place we have 'watches_gifts' category with 1163187.91 in revenue (8.83% share), and in third place 'bed_bath_table' with 1022955.77 in revenue (7.76% share). 
 - However, this doesn't mean that they are the most ordered categories since the top 3 is respectively: 'bed_bath_table' with 9267 distinct orders, 'health_beauty' with 8610 orders, and 'sports_leisure' with 7512 orders.
-- Although the category 'watches_gifts' is the most expensive between the top 3 revenue generators, it is only in the 10th place out of all categories with an average price per item of 198.73 R$. The category 'computers' is in the first place with an average of 1098.92 R$ per item. However, the category's average revenue per order is 211.91 R$. This only about 1.07 times the average item price (198.73 R$), so most orders in this category contain a single item.
+- Although the category 'watches_gifts' is the most expensive between the top 3 revenue generators, it is only in the 10th place out of all categories with an average price per item of 198.73 R$. The category 'computers' is in the first place with an average of 1098.92 R$ per item. However, the category's average revenue per order is 211.91 R$. This is only about 1.07 times the average item price (198.73 R$), so most orders in this category contain a single item.
 
 ## Delivery time by state
 - We define delivery time as the interval of time between the order purchase and its delivery to the customer. 
 We selected only states with more than 1000 delivered orders. The average delivery time over all selected states is 15.13 days. The top 3 states with the slowest average delivery time (days) are respectively: CE (21.24), BA (19.33), and PE (18.45).
 - The top 5 states in terms of number of sellers are respectively: SP (1849), PR (349), MG (244), SC (190), and RJ (171). All these states are in the southern half of Brazil, which can possibly be the reason behind the northeast states of CE, BA, and PE being the top 3 states in terms of slowest average delivery time while the state of SP is the fastest with an average of 8.74 days.
-- To test this hypothesis, we computed the average delivery days for orders with one seller. We found that single seller orders delivered within the same state take 7.9 days on average, while they 15.2 days across different states. Distance is strongly associated with delivery time, though same-state orders are mostly SP to SP, so other factors may also play a role. 
-Orders with more than one seller represent 1.35% (466 orders) of the total number for deliveries in the same state, and they represent 1.31% (806 orders) for deliveries between different states.
+- To test this hypothesis, we computed the average delivery days for orders with one seller. We found that single seller orders delivered within the same state take 7.9 days on average, while those across different states take 15.2 days. Distance is strongly associated with delivery time, though same-state orders are mostly SP to SP, so other factors may also play a role. 
+Orders with several sellers were excluded from this comparison (466 same-state orders, 1.35% of total same state orders; 806 cross-state orders, 1.31%).
 
 ## Late delivery vs reviews
 - Orders with late delivery compared to the estimated delivery date have an average review score of 2.57/5 (7658 orders). On the other hand, orders delivered on time have an average of 4.3/5 (87902 orders). In addition, 164 orders delivered late got no reviews, compared to 479 for orders delivered on time. In total, 8.13% of orders are delivered late.
@@ -51,7 +53,7 @@ Orders with more than one seller represent 1.35% (466 orders) of the total numbe
 - In summary, late orders score 1.73 points lower, and about 46% of them get 1 star versus 6.5% of on-time orders, so delays are strongly associated with dissatisfaction.
 
 ## Cumulative revenue
-- 10% of the total revenue was earned by the end of May 2017 (after 5 months). By the end of September 2017(after 9 months), revenues had passed 25% of the total. Half of all the revenue was earned by the end of January 2018 (after 13 months).
+- 10% of the total revenue was earned by the end of May 2017 (after 5 months). By the end of September 2017 (after 9 months), revenues had passed 25% of the total. Half of all the revenue was earned by the end of January 2018 (after 13 months).
 
 ## Top 3 sellers per category
 - For the top 5 categories in terms of revenue ('health_beauty', 'watches_gifts', 'bed_bath_table', 'sports_leisure', 'computers_accessories'), 'watches_gifts' sits on the top of the table in terms of concentration of sales. The top 3 sellers for this category contribute respectively to: 17.1%, 16.2%, and 13.6% of its total revenue, which adds up to 46.9%.
