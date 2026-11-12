@@ -3,7 +3,7 @@
 This project is an analysis of a Brazilian online marketplace called Olist. I analysed delivered orders from January 2017 till August 2018 (96203 orders) since the months outside that range had too few orders. I used SQL and Python to answer several business questions on the revenue growth, category income, delivery time, top sellers, and repeat customers.
 
 - Data: [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-- Tools: SQLite, SQL (CTEs, window functions), Python (sqlite3, pandas, matplotlib)
+- Tools: SQLite, SQL (CTEs, window functions), Python (sqlite3, pandas, matplotlib, seaborn)
 - Full report with all numbers and decisions: [findings.md](findings.md)
 
 ## Key findings
